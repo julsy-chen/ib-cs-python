@@ -1,0 +1,19 @@
+'''
+a + b = c
+a = b
+c = b 
+'''
+
+n = int(input())
+fibonacci = [0, 1]
+if n == 0:
+    print(fibonacci[0])
+elif n == 1:
+    print(fibonacci[1])
+else:
+    for j in range (n-1):
+        tempNum = fibonacci[0] + fibonacci[1]
+        fibonacci[0] = fibonacci[1]
+        fibonacci[1] = tempNum
+            
+    print(fibonacci[1])
